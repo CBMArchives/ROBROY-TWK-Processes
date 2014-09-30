@@ -1,0 +1,28 @@
+﻿<action type="process_Invoices_XLS" description="process_Invoices_XLS" runorder="1" status="pending">
+  <connectionstrings>
+    <connection name="rrdm" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />
+    <connection name="chess" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />
+  </connectionstrings>
+  <parameters>
+    <parameter name="path_ToBeProcessed" value="\\doclog\apexport$\Sorting Office\XLSImports" />
+    <parameter name="path_Processed" value="\\doclog\apexport$\Sorting Office\Processed" />
+    <parameter name="path_UnableToProcess" value="\\doclog\apexport$\Sorting Office\UnableToProcess" />
+    <parameter name="path_Logs" value="\\doclog\apexport$\Sorting Office\Logs" />
+    <parameter name="path_outfiles" value="\\doclog\apexport$\Chess Export" />
+    <parameter name="path_tmp" value="\\doclog\apexport$\Sorting Office" />
+
+    <parameter name="drawername" value="Accounts Payable" />
+    <parameter name="tokopen_realm" value="documentmanager" />
+    <parameter name="documenttype" value="AP Inv" />
+    <parameter name="workflowstatus" value="scanned" />
+    <parameter name="workflowapprover" value="" />
+    <parameter name="tokuser_username" value="wfprocessing" />
+    <parameter name="tokuser_password" value="wfprocessing" />
+    <parameter name="process_filename" value="" />
+    <parameter name="process_sp_name" value="" />
+    <parameter name="file_startswith" value="" />
+    <parameter name="file_regex" value="^(([A-Za-z0-9_-]{1,40})[.][Xx][Ll][Ss])$" />
+    <parameter name="tokopen_realm" value="documentmanager" />
+    <parameter name="tokopen_archivename" value="documentmanager" />
+  </parameters>
+</action>

@@ -1,0 +1,22 @@
+﻿<action type="process_Archiver" description="process_Archiver" runorder="1" status="pending">
+  <connectionstrings>
+    <!--<connection name="rrdm" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />-->
+    <connection name="rrdm" value="Data Source=cbmdevsql;Initial Catalog=documentmanager;Integrated Security=False;Persist Security Info=True;User ID=sysadminuser;Password=Cbma!992" />
+    <connection name="chess" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />
+  </connectionstrings>
+  <parameters>
+
+   
+
+    <parameter name="ex_DataConnStr" value="Data Source=dlogsql;Initial Catalog=SkyForms;Persist Security Info=True;User ID=dmclient;Password=dmclient" />
+    <parameter name="ex_ArchivePending" value="sf_GetArchivePending_TEST" />
+    <parameter name="ProcessResumeDrawer" value="True"  />
+    <parameter name="RADPDFLic" value="35ExOBwgWWr8VlPZJmPn28+pjM3lfg148C+N9ENAY0tjp5Ka/tMaiEi4l74eHEgOYVgDy8D32P6tZph7903R9y68Nw0/tPZxqYrE1FE1cxI/BL5ZgHB1fM8v4V14xo9Gd2DhbRPLwDA2BezHgwnPvcEcp+EgglAa5H3aa43vDiAAAgEAAAAAAPIlD5hb+M9I8uXXjMOn0UhEb2N1bWVudCBMb2dpc3RpeCBMTEM=" />
+    <parameter name="RADPDFConnStr" value="Server=dlogsql;Database=RadPdf;user id=dmclient;password=dmclient; Persist Security Info=True;" />
+    <parameter name="dmUsername" value="rmcnett" />
+    <parameter name="dmPassword" value="letmein" />
+    <parameter name="ex_UpdatePacketRecord" value="ex_UpdatePacketContent_TEST" />
+    <parameter name="dm_DataConnStr" value="Data Source=dlogsql;Initial Catalog=DM27_TEST;Persist Security Info=True;User ID=dmclient;Password=dmclient" />
+    
+  </parameters>
+</action>

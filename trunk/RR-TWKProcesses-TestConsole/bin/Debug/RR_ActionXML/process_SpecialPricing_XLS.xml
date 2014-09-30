@@ -1,0 +1,21 @@
+﻿<action type="process_SpecialPricing" description="process_Invoices_PDF" runorder="1" status="pending">
+  <connectionstrings>
+    <connection name="rrdm" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />
+    <connection name="chess" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />
+  </connectionstrings>
+  <parameters>
+    <parameter name="temp_out_filepath" value="c:\temp\special_pricing_out.csv" />
+    <parameter name="out_dir" value="\\doclog\apexport$\Sorting Office\SpecialPricing\out\" />
+    <parameter name="sp_get_records" value="dlx_RR_SpecialPricing" />
+    <parameter name="sp_update_complete" value="dlx_RR_SpecialPricing_update_doc" />
+    <parameter name="sp_update_error" value="" />
+    <parameter name="sp_create_doc_audit" value="dlx_RR_Create_DocAudit" />
+
+    <parameter name="path_ToBeProcessed" value="\\doclog\apexport$\Sorting Office\XLSImports" />
+    <parameter name="path_Processed" value="\\doclog\apexport$\Sorting Office\Processed" />
+    <parameter name="path_UnableToProcess" value="\\doclog\apexport$\Sorting Office\UnableToProcess" />
+    <parameter name="path_Logs" value="\\doclog\apexport$\Sorting Office\Logs" />
+    <parameter name="path_outfiles" value="\\doclog\apexport$\Chess Export" />
+    <parameter name="path_tmp" value="\\doclog\apexport$\Sorting Office" />
+  </parameters>
+</action>

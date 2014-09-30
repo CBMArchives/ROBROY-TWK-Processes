@@ -1,0 +1,32 @@
+﻿<action type="IMPORT_CONTENT" description="Import content - xContent_type_images" sequence="" status="pending">
+  <paths>
+    <path type="file"  name="verification_texas" value="\\dpscrapp2\EFTENTRY\texas.txt" />
+    <path type="directory"  name="cbmbatches" value="\\dpscrapp2\batches_cbm" />
+  </paths>
+  <parameters>
+    <parameter name="archivename" value="crarchive" />
+  </parameters>
+  <content type="TYPE10">
+    <parameters>
+      <parameter name="archivename" value="crarchive" />
+    </parameters>
+    <files>
+      <file sequence="1"  filepath="c:\temp\FESCapture\TestBatches\20120210.00004\type10-1.bmp" id="000" format=".bmp" type="TYPE10" description="TYPE10 R:1 POS:F" />
+    </files>
+  </content>
+  <workflows>
+    <workflow type="visioworkflow" name="PSB03A" version="current" id="21" >
+      <parameters>
+        <parameter name="filepath" value="\\vs-rlsweb1\VisioWorkflowProcessing\TXDPS-RLS-Workflow20110329.vsd" />
+        <parameter name="sheet" value="2: PSB Individual Docs" />
+      </parameters>
+    </workflow>
+  </workflows>
+  <groups>
+    <group id="732" name="Area1" sequence="1">
+      <parameters>
+        <parameter name="param1" value="123123" />
+      </parameters>
+    </group>
+  </groups>
+</action>

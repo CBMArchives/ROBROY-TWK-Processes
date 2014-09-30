@@ -1,0 +1,35 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <style type="text/css">
+    .expireson
+    {
+      color: #FF3300;
+    }
+    .class linediv 
+    { 
+      margin: 5px 5px 5px 5px; 
+    }
+  </style>
+</head>
+<body style="padding: 0px; margin: 0px">
+  <div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px;">
+    <div style="font-size: 16px; font-weight: bold; background-color: #000066; color: #FFFF00;">
+      PPR Request:
+      <%= dr("FileName") %></div>
+    <div class="linediv" >
+      Expires on
+        <span class="expireson"><%= dr("expireson") %></span>   
+      for
+      <%= dr("ApproverName") %></div>
+    <div class="linediv">
+      PPR Reqest is waiting for your approval PPR#
+      <%= pprHeaderID %></div>
+    <div class="linediv">
+      <a href="<%= encURL %>">Click here for approval page</a></div>
+    <div class="linediv" style="font-size: 10px;">
+      ApprovalID:
+      <%= pprApprovalID %></div>
+  </div>
+</body>
+</html>

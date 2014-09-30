@@ -1,0 +1,46 @@
+﻿<action type="process_JE_UpdateDLX" description="process_JE_UpdateDLX" runorder="1" status="pending">
+  <connectionstrings>
+    <connection name="rrdm" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />
+    <connection name="chess" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />
+  </connectionstrings>
+  <parameters>
+    <parameter name="temp_path" value="c:\temp\RR\JE" />
+    <parameter name="out_dir" value="c:\temp\RR\JE\out" />
+    
+    <parameter name="sp_je_get_LOA" value="dlx_RR_JournalEntry_GetLOA" />
+    <parameter name="sp_update_document_status" value="dlx_RR_JournalEntry_UpdateStatus" />
+    <parameter name="sp_create_doc_audit" value="dlx_RR_Create_DocAudit" />
+    <parameter name="sp_je_Update_dlx" value="dlx_RR_JournalEntry_UpdateDLX" />
+    
+    <parameter name="status_update_processed" value="JE Processed - Final" />
+
+    <parameter name="dm_ArchiveName" value="Document Manager" />
+    
+    <parameter name="path_ToBeProcessed" value="\\doclog\apexport$\Sorting Office" />
+    <parameter name="path_Processed" value="\\doclog\apexport$\Sorting Office\Processed" />
+    <parameter name="path_UnableToProcess" value="\\doclog\apexport$\Sorting Office\UnableToProcess" />
+    <parameter name="path_Logs" value="\\doclog\apexport$\Sorting Office\Logs" />
+    <parameter name="path_outfiles" value="\\doclog\apexport$\Chess Export" />
+    <parameter name="path_tmp" value="\\doclog\apexport$\Sorting Office" />
+    
+    <parameter name="include_csv_attachment" value="true" />
+
+    <parameter name="file_startswith" value="JE_" />
+    <parameter name="file_regex" value="^([Jj][Ee])(_){1}([A-Za-z0-9_-]{0,20})(.[Ii][Dd][Xx])$" />
+    
+    
+    <!--<parameter name="smtp_host" value="veronaexchange1.robroy.net" />
+    <parameter name="smtp_userid" value="chessimp" />
+    <parameter name="smtp_password" value="nc3kw96a" />-->
+    <parameter name="smtp_host" value="mail.cbmarchives.com" />
+    <parameter name="smtp_userid" value="roy.mcnett" />
+    <parameter name="smtp_password" value="kb5gtx" />
+    <parameter name="smtp_port" value="25" />
+    <parameter name="smtp_fromaddress" value="JEWorkflow@robroy.com" />
+    <parameter name="smtp_toaddress_override" value="" />
+    
+
+
+
+  </parameters>
+</action>

@@ -1,0 +1,29 @@
+﻿<procedures initialstatus="pending" status_error="error_aborted" status_onretry="error_willretry" status_onsuccess="all_completed">
+  <procedure type="ER_MOVE" runorder="1" status="pending">
+    <actions>
+      <action type="TOK_IMPORT" description="ER_MOVE - Move ER docs to ER drawer" status="pending">
+        <settings>
+          <setting name="archiveconnectionString" connectionstring="Data Source=dpscrsql1;Initial Catalog=crArchive;Persist Security Info=True;User ID=fes; Password=fes; Connection Timeout=400;" />
+        </settings>
+        <parameters>
+          <parameter name="archivename" value="CRArchive" />
+          <parameter name="drawername" value="ER" />
+          <parameter name="import_as" value="image_multipage_document" />
+        </parameters>
+        <content type="ER">
+          <files>
+            <file filepath="\\hdqcrsclusterfs\archives$\CrArchive2013-03\CCH Archives 2013-03\Auto\13\3F6C4F9.tif" id="000" format="tif" />
+            <file filepath="\\hdqcrsclusterfs\archives$\CrArchive2013-03\CCH Archives 2013-03\Auto\13\3F6C4F8.tif" id="001" format="tif" />
+            <file filepath="\\hdqcrsclusterfs\archives$\CrArchive2013-03\CCH Archives 2013-03\Auto\13\3F6C4F8.tif" id="002" format="tif" />
+          </files>
+          <indexes type="folder">
+            <index name="DOB" type="">01/01/1901</index>
+            <index name="folder_date" type="">01/01/1901</index>
+            <index name="sid" type="">06060159</index>
+            <index name="MARTINEZ,LUZ ANGEL JR" type="" />
+          </indexes>
+        </content>
+      </action>
+    </actions>
+  </procedure>
+</procedures>

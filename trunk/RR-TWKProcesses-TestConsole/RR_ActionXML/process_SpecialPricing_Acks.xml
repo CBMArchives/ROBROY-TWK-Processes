@@ -1,0 +1,25 @@
+﻿<action type="process_SpecialPricing_Acks" description="process_SpecialPricing_Acks" runorder="1" status="pending">
+  <connectionstrings>
+    <connection name="rrdm" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />
+    <connection name="chess" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />
+  </connectionstrings>
+  <parameters>
+
+    <parameter name="sp_update_complete" value="dlx_RR_SpecialPricing_update_doc_processed" />
+    <parameter name="sp_update_error" value="" />
+    <parameter name="sp_create_doc_audit" value="dlx_RR_Create_DocAudit" />
+
+    <parameter name="path_ToBeProcessed" value="\\doclog\apexport$\Sorting Office\SpecialPricing" />
+    <parameter name="path_Processed" value="\\doclog\apexport$\Sorting Office\Processed" />
+    <parameter name="path_UnableToProcess" value="\\doclog\apexport$\Sorting Office\UnableToProcess" />
+    <parameter name="path_Logs" value="\\doclog\apexport$\Sorting Office\Logs" />
+    <parameter name="path_outfiles" value="\\doclog\apexport$\Chess Export" />
+    <parameter name="path_tmp" value="\\doclog\apexport$\Sorting Office" />
+
+    <parameter name="file_startswith" value="SPF" />
+    <parameter name="file_regex" value="^[Ss][Pp][Ff]([0-9]{0,20})(.[Dd][Aa][Tt])$" />
+    <parameter name="minutes_to_resend" value="10" />
+    <parameter name="sp_get_exportedlist" value="dlx_RR_SpecialPricing_GetPendingACKs" />
+
+  </parameters>
+</action>

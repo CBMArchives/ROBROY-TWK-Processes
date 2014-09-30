@@ -1,0 +1,39 @@
+﻿<action type="process_Vendor_CreateFolder" description="process_Vendor_CreateFolder" runorder="1" status="pending">
+  <connectionstrings>
+    <connection name="rrdm" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />
+    <connection name="chess" value="Data Source=dlogsql;Initial Catalog=documentmanager;Persist Security Info=True;User ID=dmclient; Password=dmclient; Connection Timeout=400;" />
+  </connectionstrings>
+  <parameters>
+    <!--<parameter name="path_ToBeProcessed" value="c:\temp" />-->
+    <parameter name="path_ToBeProcessed" value="\\172.16.10.60\apexport$\Sorting Office" />
+    <parameter name="path_Processed" value="\\172.16.10.60\apexport$\Sorting Office\Processed" />
+    <parameter name="path_UnableToProcess" value="\\172.16.10.60\apexport$\Sorting Office\UnableToProcess" />
+    <parameter name="path_Logs" value="\\172.16.10.60\apexport$\Sorting Office\Logs" />
+    <parameter name="path_outfiles" value="\\172.16.10.60\apexport$\Chess Export" />
+    <parameter name="path_tmp" value="\\172.16.10.60\apexport$\Sorting Office" />
+
+    <parameter name="process_file_name" value="new_vendor.idx" />
+
+    <parameter name="restriction_field_value" value="SECURE" />
+    <parameter name="drawer_id" value="4" />
+
+    <parameter name="drawername" value="Accounts Payable" />
+    <parameter name="tokopen_realm" value="documentmanager" />
+    <parameter name="documenttype" value="AP Inv" />
+    <parameter name="workflowstatus" value="scanned" />
+    <parameter name="workflowapprover" value="" />
+    <!--<parameter name="tokuser_username" value="rmcnett" />
+    <parameter name="tokuser_password" value="letmein" />-->
+    <parameter name="tokuser_username" value="wfprocessing" />
+    <parameter name="tokuser_password" value="wfprocessing" />
+    
+    <parameter name="sp_update_apfolder" value="dlx_RR_VendorCreateFolder" />
+    
+    <parameter name="process_filename" value="" />
+    <parameter name="process_sp_name" value="" />
+    <parameter name="file_startswith" value="new_vendor" />
+    <parameter name="file_regex" value="^[Nn][Ee][Ww]_[Vv][Ee][Nn][Dd][Oo][Rr]([0-9]{0,20})(.[Ii][Dd][Xx])$" />
+    <parameter name="tokopen_realm" value="documentmanager" />
+    <parameter name="tokopen_archivename" value="documentmanager" />
+  </parameters>
+</action>

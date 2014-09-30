@@ -1,0 +1,33 @@
+﻿AP Inv Number				 1	UDF4.FIELD00
+AP Doc Date					 2	UDF4.FIELD01
+AP Doc Amt					 3	UDF4.FIELD02
+ICN Number					 4	UDF4.FIELD03
+AP Pur Ord Number		 5	UDF4.FIELD04
+AP Pur Req Number		 6	UDF4.FIELD05
+AP Recvr Number			 7	UDF4.FIELD06
+AP Pur Req Orig			 8	UDF4.FIELD07
+AP WF Stats					 9	UDF4.FIELD08
+Location						 10	UDF4.FIELD09
+Check Date					 11	UDF4.FIELD10
+Approver						 12	UDF4.FIELD11
+Date of Last Workflo 13	UDF4.FIELD12
+AP Check Number			 14	UDF4.FIELD13
+CostCentre					 15	UDF4.FIELD14
+Department					 16	UDF4.FIELD15
+
+DrawerId	FieldNum	FieldName	FieldType	FieldLen	FieldMask	Offset	Required	IndexUdf	DefaultVal	Workflow	dbFieldName	PrimaryKey
+4	4	ICN Number	X	15	NULL	8	0	2	NULL	0	UDF4.FIELD03	0
+4	5	AP Pur Ord Number	X	25	NULL	5	0	2	NULL	0	UDF4.FIELD04	0
+4	6	AP Pur Req Number	X	25	NULL	6	0	2	NULL	0	UDF4.FIELD05	0
+4	7	AP Recvr Number	X	25	NULL	7	0	2	NULL	0	UDF4.FIELD06	0
+4	8	AP Pur Req Orig	X	15	NULL	11	0	2	NULL	0	UDF4.FIELD07	0
+4	9	AP WF Stats	X	15	AP WF Status	12	0	2	1	0	UDF4.FIELD08	0
+4	10	Location				UDF4.FIELD09	0
+4	11	Check Date				UDF4.FIELD10	0
+4	12	Approver				UDF4.FIELD11	0
+4	13	Date of Last Workflo	UDF4.FIELD12	0
+4	14	AP Check Number			UDF4.FIELD13	0
+
+AFS LOGISTICS INC                  AFSLOG          120803-AFSLOG       07/16/201297540.78       Multi VB-GA-DG-BL
+Vendor Name	1,35	Vendor Number	36,45	Ved Loc	46,51	AP Inv Number	52,71	Date	72,81	Amount	82,96	Dept for approval	97,102	Approval Route	113,132
+Vendor Name	1,35	Vendor Number	36,45	Ved Loc	46,51	AP Inv Number	52,71	Date	72,81	Amount	82,96				
